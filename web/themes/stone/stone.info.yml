@@ -1,0 +1,20 @@
+# Theme Information
+name: Stone
+type: theme
+description: 'Custom Drupal 10+ theme for Stone'
+version: 1.x
+core_version_requirement: ^9 || ^10
+base theme: false
+
+libraries:
+ - stone/global
+
+# Regions
+regions:
+  header: Header
+  breadcrumb: Breadcrumb
+  help: Help
+  messages: 'Messages'
+  tabs: 'Tabs'
+  content: Content
+  footer: Footer

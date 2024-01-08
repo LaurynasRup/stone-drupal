@@ -1,0 +1,70 @@
+// colors
+$color-dark: #1e1e1e;
+$color-dark-secondary: #3f3f3f;
+$color-light: #dcdcdc;
+$color-purple: #a688fa;
+$color-accent: #2f2b3a;
+
+//font size
+// Set the base font-size to allow better rem usability.
+// 1rem = 10px, 1.5rem = 15px, 2rem = 20px etc.
+$base: 62.5%;
+$root: 1.6rem; // 16px
+
+$body: "Poppins", sans-serif;
+
+$s: 1.4rem;
+$r: 1.6rem;
+$rx: 1.8rem;
+$m: 2.4rem;
+$ml: 3rem;
+$l: 3.2rem;
+$xl: 6rem;
+$xxl: 9rem;
+
+// Font Weights & Examples
+$weight-light: 300;
+$weight-regular: 400;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+$weight-black: 900;
+
+// Breakpoints
+// We use EM for breakpoints to maintain consistency in all browsers.
+
+$breakpoints: (
+  s: 30em, //480px
+  sm: 45em, // 720px
+  m: 60em, // 960px
+  l: 75em, // 1200px
+  wrapper: 75em,
+  menu: 75em
+);
+
+// _mixins.scss
+@mixin respond($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin respond-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+

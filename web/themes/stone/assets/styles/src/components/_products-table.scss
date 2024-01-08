@@ -1,0 +1,72 @@
+@use "../vars/" as *;
+
+.products-table {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 0.1rem solid rgba($color-light, 0.2);
+  }
+
+  thead {
+    text-align: left;
+  }
+
+  th, td {
+    padding: 0.8rem 1.6rem;
+  }
+
+  thead {
+    background-color: darken($color-dark, 1);
+  }
+
+  tr {
+    border-top: 0.1rem solid rgba($color-light, 0.2);
+    position: relative;
+
+    &:hover {
+      background-color: darken($color-dark, 1);
+    }
+  }
+
+  .views-field-title a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  nav {
+    width: fit-content;
+    margin-top: 3.2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    ul {
+      display: flex;
+      gap: 1.6rem;
+    }
+
+    li {
+      display: grid;
+      place-content: center;
+    }
+
+    a {
+      width: 4rem;
+      height: 4rem;
+      display: grid;
+      place-content: center;
+      text-decoration: unset;
+      border: solid 0.1rem rgba($color-purple, 0.2);
+      border-radius: 0.4rem;
+      transition: background-color 0.2s ease;
+    }
+
+    a:hover {
+      background-color: rgba($color-purple, 0.2);
+    }
+  }
+}

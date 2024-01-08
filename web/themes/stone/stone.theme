@@ -1,0 +1,85 @@
+<?php
+
+function stone_preprocess_page(&$variables) {
+  /*
+    Create a class to add to a page template if current page is a view
+  */
+  $view_id = \Drupal::routeMatch()->getParameter('view_id');
+  if (!empty($view_id)) {
+    // Do stuff here only used by view pages
+    $variables['is_view'] = 'is-view-page';
+  }
+}
+
+/*
+  Preprocess tab items/links
+*/
+function stone_preprocess_menu_local_task(&$variables) {
+    // Add BEM class to link
+    $variables['link']['#options']['attributes']['class'][] = 'tab__link';
+}
+
+/**
+ * Implements hook_preprocess_node().
+ * 
+ * Allows each node type to have it's own preprocess function.
+ * e.g. 
+ * Node type: book
+ * stone_preprocess_node_book(&$variables) {
+ *   ...
+ * }
+ */
+function stone_preprocess_node(&$variables) {
+  /*
+    Load theme settings into useable variables.
+  */
+  if(empty($variables)) {
+    return;
+  }
+  
+  $node = $variables['node'];
+  $view_mode = $variables['elements']['#view_mode'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for system_theme_settings.
+ */
+function stone_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['message_bar'] = array(
+    '#type'          => 'details',
+    '#title'         => t('Message Bar'),
+    '#open'          => TRUE,
+    '#weight'        => -5,
+  );
+
+  $form['message_bar']['message_text'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Message Text'),
+    '#default_value' => theme_get_setting('message_text'),
+    '#description'   => t("Message text for the message bar."),
+  );
+
+  $form['message_bar']['message_link'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Message Link'),
+    '#default_value' => theme_get_setting('message_link'),
+    '#description'   => t("An absolute or relative URL for the message bar to link to."),
+  );
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @see \template_preprocess_responsive_image_formatter()
+ */
+function stone_preprocess_responsive_image_formatter(&$variables)
+{
+  if (isset($variables['responsive_image']["#responsive_image_style_id"]) && $variables['responsive_image']["#responsive_image_style_id"] == 'hero_image') {
+    $variables['responsive_image']['#attributes']['loading'][] = 'eager';
+    $variables['responsive_image']['#attributes']['fetchpriority'][] = 'high';
+  }
+  $width = $variables['item']->getValue()['width'];
+  $height = $variables['item']->getValue()['height'];
+  $variables['responsive_image']['#attributes']['width'][] = $width;
+  $variables['responsive_image']['#attributes']['height'][] = $height;
+}

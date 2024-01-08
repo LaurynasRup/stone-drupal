@@ -1,0 +1,74 @@
+@use "vars" as *;
+
+:root {
+  --gutter: 2rem;
+
+  @include respond-min(wrapper) {
+    --gutter: calc((100vw - 120rem) / 2);
+  }
+}
+
+html {
+  font-size: $base;
+  min-height: 100%;
+}
+
+body {
+  font-family: $body;
+  font-size: 16px;
+  height: 100%;
+  background-color: $color-dark;
+  color: $color-light;
+
+  &.menu-active {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: $color-light;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.05rem;
+}
+
+.layout-container {
+  padding: 0 1.6rem;
+}
+
+main {
+  max-width: 140rem;
+  margin: auto;
+  padding: 3.2rem 0;
+}
+
+.toolbar-tray-open {
+  --toolbar-height: 7.9rem;
+}
+
+
+.layout-content {
+  padding-bottom: 4rem;
+
+  @include respond-min(m) {
+    padding-bottom: 8rem;
+  }
+}
+
+.js img.lazyload:not([src]) {
+  visibility: hidden;
+}
+
+.js img.lazyloaded[data-sizes="auto"] {
+  display: block;
+  width: 100%;
+}
+
+.js .lazyload,
+.js .lazyloading {
+  opacity: 0;
+}
+
+.js .lazyloaded {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
