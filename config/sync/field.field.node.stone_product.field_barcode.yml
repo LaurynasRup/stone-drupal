@@ -1,0 +1,23 @@
+uuid: cbe6a775-254d-4f64-8d2b-60a3923a8051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_barcode
+    - node.type.stone_product
+id: node.stone_product.field_barcode
+field_name: field_barcode
+entity_type: node
+bundle: stone_product
+label: Barcode
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

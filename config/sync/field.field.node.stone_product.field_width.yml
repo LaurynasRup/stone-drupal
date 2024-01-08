@@ -1,0 +1,23 @@
+uuid: 3a3cf920-28e9-4e75-bf13-e77c871e207d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_width
+    - node.type.stone_product
+id: node.stone_product.field_width
+field_name: field_width
+entity_type: node
+bundle: stone_product
+label: Width
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

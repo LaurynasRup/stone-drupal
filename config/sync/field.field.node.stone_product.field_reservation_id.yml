@@ -1,0 +1,19 @@
+uuid: a0551630-762f-4331-9e8a-7fc1a8622298
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reservation_id
+    - node.type.stone_product
+id: node.stone_product.field_reservation_id
+field_name: field_reservation_id
+entity_type: node
+bundle: stone_product
+label: 'Reservation ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

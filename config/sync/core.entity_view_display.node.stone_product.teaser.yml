@@ -1,0 +1,42 @@
+uuid: 55da995f-a839-49d1-8ae0-84f22ea8f3ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stone_product.field_barcode
+    - field.field.node.stone_product.field_comments
+    - field.field.node.stone_product.field_editor
+    - field.field.node.stone_product.field_height
+    - field.field.node.stone_product.field_images
+    - field.field.node.stone_product.field_length
+    - field.field.node.stone_product.field_location
+    - field.field.node.stone_product.field_product_type
+    - field.field.node.stone_product.field_reservation_id
+    - field.field.node.stone_product.field_reserved
+    - field.field.node.stone_product.field_width
+    - node.type.stone_product
+  module:
+    - user
+id: node.stone_product.teaser
+targetEntityType: node
+bundle: stone_product
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_barcode: true
+  field_comments: true
+  field_editor: true
+  field_height: true
+  field_images: true
+  field_length: true
+  field_location: true
+  field_product_type: true
+  field_reservation_id: true
+  field_reserved: true
+  field_width: true

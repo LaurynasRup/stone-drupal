@@ -1,0 +1,29 @@
+uuid: d39ed9ad-d2a4-4cae-b104-fe546f0073f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_type
+    - node.type.stone_product
+    - taxonomy.vocabulary.stone_type
+id: node.stone_product.field_product_type
+field_name: field_product_type
+entity_type: node
+bundle: stone_product
+label: 'Product Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      stone_type: stone_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

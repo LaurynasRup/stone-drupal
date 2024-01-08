@@ -1,0 +1,22 @@
+uuid: 0d2d7c78-9250-4486-944f-ad7f679215cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stone_product
+id: node.stone_product.promote
+field_name: promote
+entity_type: node
+bundle: stone_product
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

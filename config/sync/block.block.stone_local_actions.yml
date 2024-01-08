@@ -1,0 +1,20 @@
+uuid: f3309803-3ddb-462d-a40f-eebeb40ee677
+langcode: en
+status: true
+dependencies:
+  theme:
+    - stone
+_core:
+  default_config_hash: OQ9aJ-4qVwK1x00o9EOYK4eFDjQr_HLpbPiJaPSVZiQ
+id: stone_local_actions
+theme: stone
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

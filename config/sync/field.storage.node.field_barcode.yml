@@ -1,0 +1,20 @@
+uuid: 40691a56-a7e5-41d3-b02b-768128de40a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_barcode
+field_name: field_barcode
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

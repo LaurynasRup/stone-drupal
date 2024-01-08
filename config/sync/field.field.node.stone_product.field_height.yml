@@ -1,0 +1,23 @@
+uuid: e74b520b-e969-44ed-9fd7-4d47985d1443
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_height
+    - node.type.stone_product
+id: node.stone_product.field_height
+field_name: field_height
+entity_type: node
+bundle: stone_product
+label: Height
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

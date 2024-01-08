@@ -1,0 +1,127 @@
+uuid: 7882770b-8fa6-43be-ba1d-6ade0ae42f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stone_product.field_barcode
+    - field.field.node.stone_product.field_comments
+    - field.field.node.stone_product.field_editor
+    - field.field.node.stone_product.field_height
+    - field.field.node.stone_product.field_images
+    - field.field.node.stone_product.field_length
+    - field.field.node.stone_product.field_location
+    - field.field.node.stone_product.field_product_type
+    - field.field.node.stone_product.field_reservation_id
+    - field.field.node.stone_product.field_reserved
+    - field.field.node.stone_product.field_width
+    - node.type.stone_product
+  module:
+    - image
+    - user
+id: node.stone_product.default
+targetEntityType: node
+bundle: stone_product
+mode: default
+content:
+  field_barcode:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_comments:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_editor:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_height:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_length:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_product_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_reservation_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_reserved:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_width:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

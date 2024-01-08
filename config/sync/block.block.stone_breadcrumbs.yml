@@ -1,0 +1,22 @@
+uuid: c3273e46-e740-4ba9-939b-143ea7cbcff9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stone
+_core:
+  default_config_hash: y9X3xgCsO59pQyzNLzY1D3SDJJxCHILLWkpPnmuTJ2E
+id: stone_breadcrumbs
+theme: stone
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

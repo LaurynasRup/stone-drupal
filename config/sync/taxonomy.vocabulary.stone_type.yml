@@ -1,0 +1,8 @@
+uuid: fb0348ad-0600-406e-97c1-d6cf46d8080f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Stone Type'
+vid: stone_type
+description: ''
+weight: 0
