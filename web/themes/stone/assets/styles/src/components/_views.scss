@@ -1,0 +1,34 @@
+@use "../vars" as *;
+
+.view-page > * + * {
+  margin-top: 2rem;
+
+}
+
+.view-page__title {
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+
+.view-page__filters {
+
+  input, select {
+    width: 20rem;
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.view-page__filters {
+  label {
+    display: none;
+  }
+
+  form {
+    display: flex;
+    gap: 2rem;
+  }
+}
