@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.stone_product.field_location
     - field.field.node.stone_product.field_product_type
     - field.field.node.stone_product.field_reservation_id
-    - field.field.node.stone_product.field_reserved
     - field.field.node.stone_product.field_width
     - node.type.stone_product
   module:
@@ -38,5 +37,4 @@ hidden:
   field_location: true
   field_product_type: true
   field_reservation_id: true
-  field_reserved: true
   field_width: true

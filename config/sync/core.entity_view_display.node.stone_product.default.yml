@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.stone_product.field_location
     - field.field.node.stone_product.field_product_type
     - field.field.node.stone_product.field_reservation_id
-    - field.field.node.stone_product.field_reserved
     - field.field.node.stone_product.field_width
     - node.type.stone_product
   module:
@@ -57,13 +56,10 @@ content:
     weight: 104
     region: content
   field_images:
-    type: image
-    label: above
+    type: image_url
+    label: hidden
     settings:
-      image_link: ''
       image_style: ''
-      image_loading:
-        attribute: lazy
     third_party_settings: {  }
     weight: 110
     region: content
@@ -99,16 +95,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 109
-    region: content
-  field_reserved:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 108
     region: content
   field_width:
     type: number_integer

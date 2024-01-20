@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.stone_product.field_location
     - field.field.node.stone_product.field_product_type
     - field.field.node.stone_product.field_reservation_id
-    - field.field.node.stone_product.field_reserved
     - field.field.node.stone_product.field_width
     - image.style.thumbnail
     - node.type.stone_product
@@ -94,13 +93,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_reserved:
-    type: boolean_checkbox
-    weight: 128
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_width:
     type: number
