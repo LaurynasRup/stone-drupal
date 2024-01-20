@@ -7,3 +7,27 @@ global:
     assets/scripts/global.js: {}
   dependencies:
     - core/drupal
+
+swiper-lib:
+  version: 1
+  css:
+    theme:
+      assets/styles/vendor/swiper-bundle.min.css: { minified: true }
+  js:
+    assets/scripts/vendor/swiper-bundle.min.js: { minified: true }
+
+lightgallery-lib:
+  version: 1
+  css:
+    theme:
+      assets/styles/vendor/lightgallery-bundle.min.css: { minified: true }
+  js:
+    assets/scripts/vendor/lightgallery.min.js: { minified: true }
+
+image-gallery:
+  version: 1
+  js:
+    assets/scripts/image-gallery.js: {}
+  dependencies:
+  - stone/swiper-lib
+  - stone/lightgallery-lib

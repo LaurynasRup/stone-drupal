@@ -12,7 +12,6 @@ libraries:
 # Regions
 regions:
   header: Header
-  breadcrumb: Breadcrumb
   help: Help
   messages: 'Messages'
   tabs: 'Tabs'
