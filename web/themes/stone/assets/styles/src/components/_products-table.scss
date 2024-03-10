@@ -1,6 +1,7 @@
 @use "../vars/" as *;
 
-.products-table {
+.products-table,
+.types-table {
 
   table {
     width: 100%;

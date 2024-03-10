@@ -214,6 +214,34 @@ select {
   background-color: #2f2b3a;
 }
 
+.form-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.field-scan-btn {
+  all: unset;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  background-color: #1e1e1e;
+  border-radius: 0.4rem;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-2%7Bfill:none;%7D.cls-2%7Bstroke:%23fff;stroke-linecap:round;stroke-linejoin:round;%7D%3C/style%3E%3C/defs%3E%3Cg data-name='Layer 2'%3E%3Crect class='cls-1' width='24' height='24'/%3E%3Cpath class='cls-2' d='M9,6H7A1,1,0,0,0,6,7V9'/%3E%3Cpath class='cls-2' d='m15 6h2a1 1 0 0 1 1 1v2'/%3E%3Cpath class='cls-2' d='m18 15v2a1 1 0 0 1-1 1h-2'/%3E%3Cpath class='cls-2' d='M9,18H7a1,1,0,0,1-1-1V15'/%3E%3Cline class='cls-2' x1='6' x2='18' y1='12' y2='12'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -999rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  transform: translateY(-50%);
+}
+
+#edit-field-barcode-value {
+  padding-right: 4.8rem;
+}
+
 @font-face {
   font-family: "lg";
   src: url("assets/fonts/lg.ttf?22t19m") format("truetype"), url("assets/fonts/lg.woff") format("woff"), url("assets/fonts/lg.svg") format("svg");
@@ -266,28 +294,36 @@ select {
   font-size: 1.4rem;
 }
 
-.products-table table {
+.products-table table,
+.types-table table {
   width: 100%;
   border-collapse: collapse;
   border-bottom: 0.1rem solid rgba(220, 220, 220, 0.2);
 }
-.products-table thead {
+.products-table thead,
+.types-table thead {
   text-align: left;
 }
-.products-table th, .products-table td {
+.products-table th, .products-table td,
+.types-table th,
+.types-table td {
   padding: 0.8rem 1.6rem;
 }
-.products-table thead {
+.products-table thead,
+.types-table thead {
   background-color: #1b1b1b;
 }
-.products-table tr {
+.products-table tr,
+.types-table tr {
   border-top: 0.1rem solid rgba(220, 220, 220, 0.2);
   position: relative;
 }
-.products-table tr:hover {
+.products-table tr:hover,
+.types-table tr:hover {
   background-color: #1b1b1b;
 }
-.products-table .views-field-title a::after {
+.products-table .views-field-title a::after,
+.types-table .views-field-title a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -295,21 +331,25 @@ select {
   width: 100%;
   height: 100%;
 }
-.products-table nav {
+.products-table nav,
+.types-table nav {
   width: fit-content;
   margin-top: 3.2rem;
   margin-left: auto;
   margin-right: auto;
 }
-.products-table nav ul {
+.products-table nav ul,
+.types-table nav ul {
   display: flex;
   gap: 1.6rem;
 }
-.products-table nav li {
+.products-table nav li,
+.types-table nav li {
   display: grid;
   place-content: center;
 }
-.products-table nav a {
+.products-table nav a,
+.types-table nav a {
   width: 4rem;
   height: 4rem;
   display: grid;
@@ -319,7 +359,8 @@ select {
   border-radius: 0.4rem;
   transition: background-color 0.2s ease;
 }
-.products-table nav a:hover {
+.products-table nav a:hover,
+.types-table nav a:hover {
   background-color: rgba(166, 136, 250, 0.2);
 }
 
@@ -392,6 +433,10 @@ select {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Cg data-name='Layer 2'%3E%3Cpath d='M20,25a1,1,0,0,1-.71-.29l-8-8a1,1,0,0,1,0-1.42l8-8a1,1,0,1,1,1.42,1.42L13.41,16l7.3,7.29a1,1,0,0,1,0,1.42A1,1,0,0,1,20,25Z'/%3E%3C/g%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
+.swiper-button-disabled {
+  visibility: hidden;
+}
+
 .swiper-btn-next {
   left: unset;
   right: 2rem;
@@ -423,4 +468,26 @@ select {
   font-size: 3.3rem;
   line-height: 1.2;
   font-weight: 5c00;
+}
+
+.type-image-cell span {
+  display: none;
+}
+
+.type-image-cell img {
+  max-width: 10rem;
+  max-height: 5rem;
+}
+
+.user-login-form {
+  max-width: 50rem;
+  margin: auto;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+.user-login-form > * + * {
+  margin-top: 2rem;
+}
+.user-login-form .form-actions {
+  margin-top: 3rem;
 }

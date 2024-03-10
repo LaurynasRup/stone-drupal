@@ -1,0 +1,16 @@
+@use "../vars" as *;
+
+.user-login-form {
+  max-width: 50rem;
+  margin: auto;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+
+  & > * + * {
+    margin-top: 2rem;
+  }
+
+  .form-actions {
+    margin-top: 3rem;
+  }
+}

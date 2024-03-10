@@ -36,6 +36,8 @@
     'view-page',
   ]
 %}
+
+{{ attach_library('stone/table-gallery') }}
 <div{{ attributes.addClass(classes) }}>
   {% if view.title %}
     <h1 class="view-page__title">{{ view.title }}</h1>

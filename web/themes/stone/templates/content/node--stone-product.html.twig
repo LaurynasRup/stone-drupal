@@ -67,10 +67,18 @@
  *
  */
 #}
+
 <article class="stone-product">
   <h1 class="stone-product__title">{{ label }}</h1>
   <section class="product-content">
    <div class="product-content__details">
+   {% if content.field_product_type|render|trim %}
+    <div class="detail">
+      <span class="detail__label">Product type:</span>
+      <span class="detail__value">{{ content.field_product_type[0]['#title'] }}</span>
+    </div>
+   {% endif %}
+   
     {% if content.field_barcode|render|trim %}
       <div class="detail">
         <span class="detail__label">Barcode:</span>

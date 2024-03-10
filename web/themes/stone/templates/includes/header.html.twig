@@ -1,4 +1,9 @@
 <header class="site-header">
   <a href="{{ url('<front>') }}"><div class="site-header__logo">Back Home</div></a>
-  <div class="site-header__menu">{{ drupal_menu('main') }}</div>
+  {% if logged_in %}
+    <div class="site-header__menu">{{ drupal_menu('main') }}</div>
+  {% else %}
+    <div class="site-header__menu">{{ drupal_menu('guest-nav') }}</div>
+  {% endif %}
+  
 </header>

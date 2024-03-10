@@ -1,0 +1,10 @@
+@use "../vars/" as *;
+
+.type-image-cell span {
+  display: none;
+}
+
+.type-image-cell img {
+  max-width: 10rem;
+  max-height: 5rem;
+}

@@ -31,3 +31,10 @@ image-gallery:
   dependencies:
   - stone/swiper-lib
   - stone/lightgallery-lib
+
+table-gallery:
+  version: 1
+  js:
+    assets/scripts/table-gallery.js: {}
+  dependencies:
+  - stone/lightgallery-lib
